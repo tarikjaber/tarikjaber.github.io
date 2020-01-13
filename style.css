@@ -4,7 +4,12 @@
 
 .footer {
     background-color:gray;
-    margin-left: 25px;
-    margin-right: 25px;
-    color:white;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+}
+
+.container {
+    margin-left: 0px;
+    height: 500px;
 }
