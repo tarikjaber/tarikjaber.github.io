@@ -2,15 +2,40 @@
     margin-top: 8px;
 }
 
-.footer {
-    background-color:gray;
-    bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    color: white;
+.container {
+    
 }
 
-.container {
-    margin-left: 0px;
-    height: 500px;
+#container content {
+    height:100%;
 }
+
+#page-content {
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: 0;
+}
+
+body {
+    background: #007bff;
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+    color: black;
+   
+}
+
+p {
+    max-width: 350px;
+    align-items: center;
+}
+
+.navbar-dark {
+    background-image:none;
+    background-color:crimson;
+}
+
+#sticky-footer {
+    bottom: 0px;
+}
+
