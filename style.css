@@ -64,30 +64,7 @@ a:hover {
     
 }
 
-@media (max-width: 575px) {
-    .title-img {
-        position: relative;
-    }
-    
-    .navbar {
-        padding: 25px 10% 0;
-    }
-    
-    .bodytext {
-        padding: 5% 10%;
-    }
-    
-    .row {
-        padding: 5% 10%;
-    }
-}
 
-@media (max-width: 766) {
-    .title-column2 {
-        padding: auto 0;
-        text-align: center;
-    }
-}
 
 #about {
     background-color: #679b9b;
@@ -107,7 +84,30 @@ a:hover {
     text-align: right;
 }
 
+@media (max-width: 767px) {
+    .title-column2 {
+        padding: auto 0;
+        text-align: center;
+    }
+}
 
+@media (max-width: 575px) {
+    .title-img {
+        position: relative;
+    }
+    
+    .navbar {
+        padding: 25px 10% 0;
+    }
+    
+    .bodytext {
+        padding: 5% 10%;
+    }
+    
+    .row {
+        padding: 5% 10%;
+    }
+}
 
 h1 {
   font-size: 5.625rem;
@@ -132,5 +132,9 @@ h2 {
 
 .intereststitle {
     color: #679b9b;
+}
+
+.copyright {
+    margin-bottom: 10px;
 }
 
