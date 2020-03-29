@@ -80,10 +80,11 @@ a:hover {
     .row {
         padding: 5% 10%;
     }
-    
+}
+
+@media (max-width: 766) {
     .title-column2 {
-        padding: 20px 0;
-        margin: 0;
+        padding: auto 0;
         text-align: center;
     }
 }
@@ -102,7 +103,7 @@ a:hover {
 
 .title-column2 {
     padding: 20px 0;
-    margin: 0;
+    margin: auto;
     text-align: right;
 }
 
