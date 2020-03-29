@@ -80,6 +80,12 @@ a:hover {
     .row {
         padding: 5% 10%;
     }
+    
+    .title-column2 {
+        padding: 20px 0;
+        margin: 0;
+        text-align: center;
+    }
 }
 
 #about {
@@ -96,7 +102,8 @@ a:hover {
 
 .title-column2 {
     padding: 20px 0;
-    text-align: center;
+    margin: 0;
+    text-align: right;
 }
 
 
