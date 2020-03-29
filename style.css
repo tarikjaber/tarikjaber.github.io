@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #aacfcf;
+    font-family: 'Montserrat', sans-serif;
 }
 
 p {
@@ -12,11 +13,12 @@ p {
 
 .navbarimg {
     border-radius: 50%;
+    margin-right: 3%;
 }
 
 
 #bodytext {
-    padding: 5% 20%;
+    padding: 20px 20%;
 }
 
 .navbar {
@@ -32,7 +34,7 @@ p {
 .footer {
     padding: 5%;
     background-color: #fde2e2;
-    color: black;
+    color: #3b6978;
     text-align: center;
 }
 
@@ -42,5 +44,6 @@ p {
 }
 
 .icon:hover {
-    color: black;
+    color: #204051; 
 }
+
