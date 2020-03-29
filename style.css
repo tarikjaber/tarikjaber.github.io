@@ -17,7 +17,7 @@ p {
 }
 
 
-#bodytext {
+.bodytext {
     padding: 5% 20%;
 }
 
@@ -45,5 +45,9 @@ p {
 
 .icon:hover {
     color: #204051; 
+}
+
+#interests {
+    background-color: #ffb6b6;
 }
 
