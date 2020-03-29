@@ -24,9 +24,10 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-primary navbar-dark  sticky-top">
-        <a href="https://cincyhacks.com" target="_blank" class="navbar-brand">
-            <img src="tarik.jpeg" alt="Logo" style="width:40px;" class="rounded">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="tarik.jpeg" width="30" height="30" class="d-inline-block align-top navbarimg" alt="tarik-img">
+            Tarik Jaber
         </a>
 
 
@@ -34,13 +35,13 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About</a>
+        <div class="collapse navbar-collapse mr-auto" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="interests.html">Interests</a>
+                    <a class="nav-link" href="#interests">Interests</a>
                 </li>
 
                 <!--
@@ -57,12 +58,9 @@
     </nav>
 
 
-    <div class="container content" id="bodytext">
-        <div class="alert alert-success alert-dismissible fade show">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Welcome!</strong> Thank you for visiting my website.
-        </div>
+    <div class="container content" id="about">
 
+        <h1>About</h1>
         <p>Hi! My name is Tarik Jaber and I am a junior at William Mason high school. I am passionate in math, computer science and physics. Currently, I am the logistics coordinator for CincyHacks 2020 (click on my image to visit the website).
             <br>
             <br>
@@ -71,6 +69,11 @@
             <br>
             I lived in Mason from 3rd to 6th grade, but moved to Saudi Arabia for my middle school years. I then moved back to Mason for my freshman year of high school.
         </p>
+        <div id="interests">
+            <h1>Interests</h1>
+            <p>A couple of my interests include programming, mathematics and physics. I like to play basketball, soccer and am currently on the William Mason High School Track Team. I occasionally go fishing.</p>
+        </div>
+
     </div>
 
     <footer class="footer py-4 bg-dark text-white-50">
