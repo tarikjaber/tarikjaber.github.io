@@ -11,6 +11,10 @@ body {
     margin-right: 3%;
 }
 
+a{
+    color: #3b6978;
+}
+
 
 .bodytext {
     padding: 5% 10%;
@@ -30,8 +34,8 @@ body {
 .footer {
     padding: 10px;
     background-color: #fde2e2;
-    color: #3b6978;
     text-align: center;
+    color: #3b6978;
 }
 
 .icon {
