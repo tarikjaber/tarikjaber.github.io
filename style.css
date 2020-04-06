@@ -89,6 +89,8 @@ a:hover {
     text-align: right;
 }
 
+
+
 @media (max-width: 767px) {
     .title-column2 {
         padding: auto 0;
@@ -97,12 +99,6 @@ a:hover {
     
     .title-column1 {
         text-align: center;
-    }
-}
-
-@media (max-width: 575px) {
-    .title-img {
-        position: relative;
     }
     
     .navbar {
@@ -116,6 +112,12 @@ a:hover {
     .row {
         padding: 5% 10%;
     }
+}
+
+@media (max-width: 575px) {
+    .title-img {
+        position: relative;
+    } 
 }
 
 h1 {
