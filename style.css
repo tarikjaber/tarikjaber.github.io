@@ -54,13 +54,26 @@ a{
 }
 
 .icon {
-    padding: 8px 8px 18px;
+    padding: 0.75rem .6rem;
+    margin: 0;
     font-size: 1.5rem;
     transition: 0.3s;
+    
 }
 
 .icon:hover {
+    padding: 0 .45rem;
     color: #204051; 
+    font-size: 1.8rem;
+}
+
+.icons {
+    height: 3rem;
+    padding-bottom: 55px;
+}
+
+a {
+    margin: auto 0;
 }
 
 a:hover {
