@@ -117,6 +117,10 @@ a:hover {
     #title {
         padding-bottom: 70px;
     }
+    
+    .footer {
+        padding-top: 20px;
+    }
 }
 
 @media (max-width: 575px) {
