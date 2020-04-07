@@ -30,7 +30,7 @@ a{
 
 .bodytext {
 
-    padding: 5% 20%;
+    padding: 25px 20%;
     color:white;
 }
 
@@ -107,7 +107,7 @@ a:hover {
     }
     
     .bodytext {
-        padding: 5% 10%;
+        padding: 25px 10%;
     }
     
     .row {
