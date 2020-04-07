@@ -113,6 +113,10 @@ a:hover {
     .row {
         padding: 5% 10%;
     }
+    
+    #title {
+        padding-bottom: 70px;
+    }
 }
 
 @media (max-width: 575px) {
