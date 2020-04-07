@@ -74,6 +74,7 @@ a{
 
 a {
     margin: auto 0;
+    transition: 0.3s;
 }
 
 a:hover {
