@@ -3,8 +3,7 @@ var year = date.getFullYear();
 
 document.querySelector(".copyright").innerHTML = "Copyright &copy; Tarik Jaber " + String(year);
 
-console.log("hello");
-
+$("h2, .bodytext p, .footer *").addClass("hidden");
 const elements = $("h2, .bodytext p, .footer *");
 
 var windowHeight = window.innerHeight;;
