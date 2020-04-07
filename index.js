@@ -5,7 +5,7 @@ document.querySelector(".copyright").innerHTML = "Copyright &copy; Tarik Jaber "
 
 console.log("hello");
 
-const elements = $("h1, h2, h3, .bodytext p, .footer *, img");
+const elements = $("h2, .bodytext p, .footer *");
 
 var windowHeight = window.innerHeight;;
 
@@ -27,4 +27,7 @@ document.addEventListener('scroll', function(e) {
 
 window.onload = function () {
   checkPosition();
+
+  $(".title-column1 h1, .title-column1 h3").addClass("slide-in-left");
+  $(".title-column2 img").addClass("slide-in-right");
 }
