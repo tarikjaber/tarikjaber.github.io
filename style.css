@@ -102,7 +102,7 @@ a:hover {
 }
 
 .left-skewed {
-    transform: translateY(30%) translateX(-100%) rotateZ(30deg);
+    transform: translateY(30%) translateX(-150%) rotateZ(30deg);
 }
 
 .title-column2 {
@@ -112,7 +112,7 @@ a:hover {
 }
 
 .right-skewed {
-    transform: translateY(30%) translateX(100%) rotateZ(-30deg) ;
+    transform: translateY(30%) translateX(150%) rotateZ(-30deg) ;
 }
 
 @media (max-width: 767px) {
