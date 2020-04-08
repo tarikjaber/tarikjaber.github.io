@@ -102,7 +102,7 @@ a:hover {
 }
 
 .left-skewed {
-    transform: translateX(-100%);
+    transform: translateX(-100%) rotateZ(30deg);
 }
 
 .title-column2 {
@@ -112,7 +112,7 @@ a:hover {
 }
 
 .right-skewed {
-    transform: translateX(100%);
+    transform: translateX(100%) rotateZ(-30deg);
 }
 
 @media (max-width: 767px) {
@@ -210,7 +210,7 @@ h2 {
 @keyframes fade-in {
     from {
         opacity: 0;
-        transform: rotate(4deg) translateX(10%);
+        transform: rotate(4deg) translateX(18%);
     }
 
     to {
@@ -220,7 +220,7 @@ h2 {
 }
 
 .fade-twist-element {
-    animation: fade-in 1.5s;
+    animation: fade-in 2.5s;
 }
 
 .slide-in-left {

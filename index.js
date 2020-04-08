@@ -14,13 +14,7 @@ function checkPosition() {
     var element = elements[i];
     var positionFromTop = elements[i].getBoundingClientRect().top;
 
-    if (elements[i].parentNode.tagName === "FOOTER" || elements[i].parentNode.parentNode.tagName === "FOOTER") {
-      topFactor = 1.0;
-    } else {
-      topFactor = 0.80;
-    }
-
-    if (positionFromTop - topFactor * windowHeight <= 0) {
+    if (positionFromTop - 0.80 * windowHeight <= 0) {
       element.classList.add('fade-twist-element');
       element.classList.remove('hidden');
     }
