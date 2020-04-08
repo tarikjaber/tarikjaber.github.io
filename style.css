@@ -102,7 +102,7 @@ a:hover {
 }
 
 .left-skewed {
-    transform: translateY(30%) translateX(-150%) rotateZ(30deg);
+    transform: translateX(-100%);
 }
 
 .title-column2 {
@@ -112,7 +112,7 @@ a:hover {
 }
 
 .right-skewed {
-    transform: translateY(30%) translateX(150%) rotateZ(-30deg) ;
+    transform: translateX(100%);
 }
 
 @media (max-width: 767px) {
@@ -233,20 +233,20 @@ h2 {
 
 @keyframes slide-in-left {
     from {
-        transform: translateX(-100%) translateY(-30%) rotateZ(30deg);
+        transform: translateX(-150%);
     }
 
     to {
-        transform: translateX(0%) translateY(0%) rotateZ(0deg);
+        transform: translateX(0%);
     }
 }
 
 @keyframes slide-in-right {
     from {
-        transform: translateX(100%) translateY(-30%) rotateZ(-30deg);
+        transform: translateX(150%);
     }
 
     to {
-        transform: translateX(0%) translateY(0%) rotateZ(0deg);
+        transform: translateX(0%);
     }
 }
