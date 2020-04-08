@@ -102,7 +102,7 @@ a:hover {
 }
 
 .left-skewed {
-    transform: translateX(-100%) rotateZ(30deg);
+    transform: translateY(30%) translateX(-100%) rotateZ(30deg);
 }
 
 .title-column2 {
@@ -112,7 +112,7 @@ a:hover {
 }
 
 .right-skewed {
-    transform: translateX(100%) rotateZ(-30deg);
+    transform: translateY(30%) translateX(100%) rotateZ(-30deg) ;
 }
 
 @media (max-width: 767px) {
@@ -210,12 +210,12 @@ h2 {
 @keyframes fade-in {
     from {
         opacity: 0;
-        transform: rotate(4deg) translateX(18%);
+        transform: translateY(30%);
     }
 
     to {
         opacity: 1;
-        transform: 0;
+        transform: translateY(0%);
     }
 }
 
@@ -233,20 +233,20 @@ h2 {
 
 @keyframes slide-in-left {
     from {
-        transform: translateX(-100%) rotateZ(30deg);
+        transform: translateX(-100%) translateY(-30%) rotateZ(30deg);
     }
 
     to {
-        transform: translateX(0%) rotateZ(0deg);
+        transform: translateX(0%) translateY(0%) rotateZ(0deg);
     }
 }
 
 @keyframes slide-in-right {
     from {
-        transform: translateX(100%) rotateZ(-30deg);
+        transform: translateX(100%) translateY(-30%) rotateZ(-30deg);
     }
 
     to {
-        transform: translateX(0%) rotateZ(0deg);
+        transform: translateX(0%) translateY(0%) rotateZ(0deg);
     }
 }
