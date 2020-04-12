@@ -1,50 +1,108 @@
+/******************* BODY TAGS *********************/
 html,body {
     width: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
-}
-
-body {    
     background-color: #aacfcf;
     line-height:1.8;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat',
+    sans-serif;
 }
 
-.navbarimg {
-    border-radius: 50%;
-    margin-right: 3%;
-
-}
-
-.title-img {
-    width:80%;
-    position:relative;
+h1 {
+    font-size: 5.625rem;
     margin: 0 auto;
+    font-family: 'Sacramento', cursive;
 }
 
-a{
+h2 {
+    font-family: 'DM Serif Display', serif;
     color: #3b6978;
+    font-size: 2.5rem;
+    margin: 15px auto 20px auto;
 }
 
-
-.bodytext {
-
-    padding: 25px 20%;
-    color:white;
+a {
+    color: #3b6978;
+    margin: auto 0;
+    transition: 0.3s;
 }
 
+a:hover {
+    color: #204051;
+    text-decoration: none;
+}
+
+/******************* CLASS TAGS *********************/
+/******************* TITLE *********************/
 .navbar {
-     padding: 25px 20%;
+    padding: 25px 20%;
     width: 100%;
 }
 
-.content {
-    padding: 2% 10%;
-    background-color: #679b9b;
-    color:white;
-    
+.navbar-img {
+    border-radius: 50%;
+    margin-right: 3%;
 }
+
+.row {
+    padding: 5% 20%;
+}
+
+.title-col1, .title-col2 {
+    margin: auto;
+    padding: 5% 0;
+}
+
+.title-col1 {
+    text-align: left;
+    height: 40%;
+}
+
+.title-img {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.title-col2 {
+    text-align: right;
+}
+
+/******************* BODY TEXT *********************/
+
+.bodytext {
+    padding: 25px 20%;
+    color: white;
+}
+
+#interests h2 {
+    color: #679b9b;
+}
+
+/******************* DIVIDERS *********************/
+
+.titleAboutDivider,
+.aboutInterestsDivider,
+.interestsFooterDivider {
+    width: 100%;
+    height: 12vh;
+}
+
+.titleAboutDivider {
+    background: linear-gradient(to top right, #679b9b calc(50% - 1px), #aacfcf, #aacfcf calc(50% + 1px))
+}
+
+.aboutInterestsDivider {
+    background: linear-gradient(to top left, #ffb6b6 calc(50% - 1px), #679b9b, #679b9b calc(50% + 1px))
+}
+
+.interestsFooterDivider {
+    background: linear-gradient(to top right, #fde2e2 calc(50% - 1px), #ffb6b6, #ffb6b6 calc(50% + 1px))
+}
+
+/******************* FOOTER *********************/
 
 .footer {
     padding: 0 30px 40px;
@@ -53,91 +111,60 @@ a{
     color: #3b6978;
 }
 
-.icon {
-    padding: 0.75rem .6rem;
-    margin: 0;
-    font-size: 1.5rem;
-    transition: 0.3s;
-    
-}
-
-.icon:hover {
-    padding: 0 .45rem;
-    color: #204051; 
-    font-size: 1.8rem;
-}
-
 .icons {
     height: 3rem;
     padding-bottom: 55px;
 }
 
-a {
-    margin: auto 0;
+.icon {
+    padding: 0.75rem .6rem;
+    margin: 0;
+    font-size: 1.5rem;
     transition: 0.3s;
 }
 
-a:hover {
-    color: #204051; 
-    text-decoration: none;
+.icon:hover {
+    padding: 0 .45rem;
+    color: #204051;
+    font-size: 1.8rem;
+}
+
+.copyright {
+    margin-bottom: 12px;
+}
+
+/******************* ID TAGS *********************/
+
+#title {
+    color: #679b9b;
+}
+
+#about {
+    background-color: #679b9b;
 }
 
 #interests {
     background-color: #ffb6b6;
-    
 }
 
-
-
-#about {
-    background-color: #679b9b;
-    z-index: 1;
-}
-
-.title-column1 {
-    text-align: left;
-    height: 40%;
-    padding: 5% 0;
-    margin: auto;
-}
-
-.left-skewed {
-    transform: translateX(-100%);
-}
-
-.title-column2 {
-    padding: 20px 0;
-    margin: auto;
-    text-align: right;
-}
-
-.right-skewed {
-    transform: translateX(100%);
-}
-
+/******************* MEDIA QUERIES *********************/
+/******************* MOBILE LAYOUT *********************/
 @media (max-width: 767px) {
 
-    .title-column1,.title-column2 {
+    .title-col1,.title-col2 {
         width: 100%;
     }
 
-    .title-column2 {
+    .title-col2 {
         padding: auto 0;
         text-align: center;
     }
     
-    .title-column1 {
+    .title-col1 {
         text-align: center;
-        /* padding: 10vh 0; */
-    }
-    
-    .title-column1 h1 {
-        padding: 0;
-        margin: 0;
     }
 
-    .title-column1 h3 {
-        padding: 0;
+    .title-col1 h3 {
         margin: 0 0 40px;
     }
 
@@ -147,10 +174,6 @@ a:hover {
     
     .bodytext {
         padding: 50px 10%;
-    }
-    
-    .row {
-        padding: 0;
     }
     
     #title {
@@ -168,75 +191,14 @@ a:hover {
     } 
 }
 
-h1 {
-  font-size: 5.625rem;
-  margin: 0 auto;
-  font-family: 'Sacramento', cursive;
+/******************* ANIMATIONS *********************/
+
+.left-skewed {
+    transform: translateX(-100%);
 }
 
-h2 {
-  font-family: 'DM Serif Display',
-  serif;
-  color: #3b6978;
-  font-size: 2.5rem;
-  margin: 15px auto 20px auto;
-}
-
-#title {
-    color: #679b9b;
-}
-
-.row {
-    padding: 5% 20%;
-}
-
-.intereststitle {
-    color: #679b9b;
-}
-
-.copyright {
-    margin-bottom: 12px;
-}
-
-.tbdivider, .bddivider, .ifdivider {
-    width:100%;
-    height:12vh;
-}
-
-.tbdivider {
-  background: linear-gradient(to top right, #679b9b calc(50% - 1px), #aacfcf, #aacfcf calc(50% + 1px) )
-}
-
-.bddivider {
-  background: linear-gradient(to top left, #ffb6b6 calc(50% - 1px), #679b9b, #679b9b calc(50% + 1px) )
-}
-
-.ifdivider {
-  background: linear-gradient(to top right, #fde2e2 calc(50% - 1px), #ffb6b6, #ffb6b6 calc(50% + 1px) )
-}
-
-.red {
-    color: red;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(5vh);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-
-.fade-twist-element {
-    animation: fade-in 1.5s;
+.right-skewed {
+    transform: translateX(100%);
 }
 
 .slide-in-left {
@@ -264,5 +226,25 @@ h2 {
 
     to {
         transform: translateX(0%);
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fade-in 2.0s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
     }
 }
