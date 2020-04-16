@@ -4,7 +4,7 @@ html,body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
-    background-color: #aacfcf;
+    background-color: #393e46;
     line-height:1.8;
     font-family: 'Montserrat',
     sans-serif;
@@ -18,19 +18,18 @@ h1 {
 
 h2 {
     font-family: 'DM Serif Display', serif;
-    color: #3b6978;
     font-size: 2.5rem;
     margin: 15px auto 20px auto;
 }
 
 a {
-    color: #3b6978;
+    color: #393e46;
     margin: auto 0;
     transition: 0.3s;
 }
 
 a:hover {
-    color: #204051;
+    color: #222831;
     text-decoration: none;
 }
 
@@ -60,6 +59,10 @@ a:hover {
     height: 40%;
 }
 
+.title-col1 h3 {
+    color: #eee;
+}
+
 .title-img {
     width: 80%;
     position: relative;
@@ -77,8 +80,16 @@ a:hover {
     color: white;
 }
 
+#about h2 {
+    color: #393e46;
+}
+
 #interests h2 {
-    color: #679b9b;
+    color: #00adb5;
+}
+
+#interests p {
+    color: #eee;
 }
 
 /******************* DIVIDERS *********************/
@@ -91,24 +102,24 @@ a:hover {
 }
 
 .titleAboutDivider {
-    background: linear-gradient(to top right, #679b9b calc(50% - 1px), #aacfcf, #aacfcf calc(50% + 1px))
+    background: linear-gradient(to top right, #00adb5 calc(50% - 1px), #393e46, #393e46 calc(50% + 1px))
 }
 
 .aboutInterestsDivider {
-    background: linear-gradient(to top left, #ffb6b6 calc(50% - 1px), #679b9b, #679b9b calc(50% + 1px))
+    background: linear-gradient(to top left, #222831 calc(50% - 1px), #00adb5, #00adb5 calc(50% + 1px))
 }
 
 .interestsFooterDivider {
-    background: linear-gradient(to top right, #fde2e2 calc(50% - 1px), #ffb6b6, #ffb6b6 calc(50% + 1px))
+    background: linear-gradient(to top right, #eee calc(50% - 1px), #222831, #222831 calc(50% + 1px))
 }
 
 /******************* FOOTER *********************/
 
 .footer {
     padding: 0 30px 40px;
-    background-color: #fde2e2;
+    background-color: #eee;
     text-align: center;
-    color: #3b6978;
+    color: #393e46;
 }
 
 .icons {
@@ -121,11 +132,12 @@ a:hover {
     margin: 0;
     font-size: 1.5rem;
     transition: 0.3s;
+    color: #393e46;
 }
 
 .icon:hover {
     padding: 0 .45rem;
-    color: #204051;
+    color: #222831;
     font-size: 1.8rem;
 }
 
@@ -136,15 +148,16 @@ a:hover {
 /******************* ID TAGS *********************/
 
 #title {
-    color: #679b9b;
+    color: #00adb5;
+    background-color: #393e46;
 }
 
 #about {
-    background-color: #679b9b;
+    background-color: #00adb5;
 }
 
 #interests {
-    background-color: #ffb6b6;
+    background-color: #222831;
 }
 
 /******************* MEDIA QUERIES *********************/
