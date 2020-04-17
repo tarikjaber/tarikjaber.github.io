@@ -1,13 +1,26 @@
+/******************* BODY COLORS *********************/
+:root {
+    /* --lightLight: #eeeeee;
+    --darkLight: #00adb5;
+    --lightDark: #393e46;
+    --darkDark: #222831; */
+    --lightLight: #f4f7f7;
+    --darkLight: #79a8a9;
+    --lightDark: #aacfd0;
+    --darkDark: #1f4e5f;
+    --paragraphColor: #eee;
+}
 /******************* BODY TAGS *********************/
-html,body {
+html,
+body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
-    background-color: #393e46;
-    line-height:1.8;
+    overflow-x: hidden;
+    background-color: var(--lightDark);
+    line-height: 1.8;
     font-family: 'Montserrat',
-    sans-serif;
+        sans-serif;
 }
 
 h1 {
@@ -23,13 +36,13 @@ h2 {
 }
 
 a {
-    color: #393e46;
+    color: var(--darkDark);
     margin: auto 0;
     transition: 0.3s;
 }
 
 a:hover {
-    color: #222831;
+    color: var(--darkDark);
     text-decoration: none;
 }
 
@@ -49,7 +62,8 @@ a:hover {
     padding: 5% 20%;
 }
 
-.title-col1, .title-col2 {
+.title-col1,
+.title-col2 {
     margin: auto;
     padding: 5% 0;
 }
@@ -60,7 +74,7 @@ a:hover {
 }
 
 .title-col1 h3 {
-    color: #eee;
+    color: var(--darkLight);
 }
 
 .title-img {
@@ -77,19 +91,19 @@ a:hover {
 
 .bodytext {
     padding: 25px 20%;
-    color: white;
+    color: var(--paragraphColor); 
 }
 
 #about h2 {
-    color: #393e46;
+    color: var(--lightDark);
 }
 
 #interests h2 {
-    color: #00adb5;
+    color: var(--darkLight);
 }
 
 #interests p {
-    color: #eee;
+    color: var(--paragraphColor);
 }
 
 /******************* DIVIDERS *********************/
@@ -102,24 +116,24 @@ a:hover {
 }
 
 .titleAboutDivider {
-    background: linear-gradient(to top right, #00adb5 calc(50% - 1px), #393e46, #393e46 calc(50% + 1px))
+    background: linear-gradient(to top right, var(--darkLight) calc(50% - 1px), var(--lightDark), var(--lightDark) calc(50% + 1px))
 }
 
 .aboutInterestsDivider {
-    background: linear-gradient(to top left, #222831 calc(50% - 1px), #00adb5, #00adb5 calc(50% + 1px))
+    background: linear-gradient(to top left, var(--darkDark) calc(50% - 1px), var(--darkLight), var(--darkLight) calc(50% + 1px))
 }
 
 .interestsFooterDivider {
-    background: linear-gradient(to top right, #eee calc(50% - 1px), #222831, #222831 calc(50% + 1px))
+    background: linear-gradient(to top right, var(--lightLight) calc(50% - 1px), var(--darkDark), var(--darkDark) calc(50% + 1px))
 }
 
 /******************* FOOTER *********************/
 
 .footer {
     padding: 0 30px 40px;
-    background-color: #eee;
+    background-color: var(--lightLight);
     text-align: center;
-    color: #393e46;
+    color: var(--darkDark);
 }
 
 .icons {
@@ -132,12 +146,12 @@ a:hover {
     margin: 0;
     font-size: 1.5rem;
     transition: 0.3s;
-    color: #393e46;
+    color: var(--darkDark);
 }
 
 .icon:hover {
     padding: 0 .45rem;
-    color: #222831;
+    color: var(--darkDark);
     font-size: 1.8rem;
 }
 
@@ -148,23 +162,24 @@ a:hover {
 /******************* ID TAGS *********************/
 
 #title {
-    color: #00adb5;
-    background-color: #393e46;
+    color: var(--darkLight);
+    background-color: var(--lightDark);
 }
 
 #about {
-    background-color: #00adb5;
+    background-color: var(--darkLight);
 }
 
 #interests {
-    background-color: #222831;
+    background-color: var(--darkDark);
 }
 
 /******************* MEDIA QUERIES *********************/
 /******************* MOBILE LAYOUT *********************/
 @media (max-width: 767px) {
 
-    .title-col1,.title-col2 {
+    .title-col1,
+    .title-col2 {
         width: 100%;
     }
 
@@ -172,7 +187,7 @@ a:hover {
         padding: auto 0;
         text-align: center;
     }
-    
+
     .title-col1 {
         text-align: center;
     }
@@ -184,15 +199,15 @@ a:hover {
     .navbar {
         padding: 25px 10% 0;
     }
-    
+
     .bodytext {
         padding: 50px 10%;
     }
-    
+
     #title {
         padding-bottom: 10px;
     }
-    
+
     .footer {
         padding-top: 20px;
     }
@@ -201,7 +216,7 @@ a:hover {
 @media (max-width: 575px) {
     .title-img {
         position: relative;
-    } 
+    }
 }
 
 /******************* ANIMATIONS *********************/
