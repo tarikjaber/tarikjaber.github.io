@@ -1,13 +1,9 @@
 /******************* BODY COLORS *********************/
 :root {
-    /* --lightLight: #eeeeee;
-    --darkLight: #00adb5;
-    --lightDark: #393e46;
-    --darkDark: #222831; */
     --lightLight: #f4f7f7;
-    --darkLight: #79a8a9;
+    --darkLight: #5da0a2;
     --lightDark: #aacfd0;
-    --darkDark: #1f4e5f;
+    --darkDark: #34495e;
     --paragraphColor: #eee;
 }
 /******************* BODY TAGS *********************/

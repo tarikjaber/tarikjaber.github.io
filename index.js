@@ -1,7 +1,46 @@
+//////////////////////// DATE FOR FOOTER ////////////////////////////
 var date = new Date();
 var year = date.getFullYear();
-
 document.querySelector(".copyright").innerHTML = "Copyright &copy; Tarik Jaber " + String(year);
+
+//////////////////////// ANIME JS ////////////////////////////
+let titleAnimation = anime({
+  targets: 'h1',
+  // Properties 
+  translateX: '100%',
+  // Property Parameters
+  duration: 2000,
+});
+
+let subtitleAnimation = anime({
+  targets: 'h3',
+  // Properties 
+  translateX: '100%',
+  // Property Parameters
+  duration: 2000,
+  delay: 100
+});
+
+let titleImageAnimation = anime({
+  targets: '.title-col2 img',
+  // Properties 
+  translateX: '-100%',
+  scaleX: [
+    {
+      value: 0.8,
+      delay: 250,
+      duration: 375
+    },
+    {
+      value: 1.0,
+      duration: 375
+    }
+  ],
+  // Property Parameters
+  duration: 2000,
+});
+
+/////////////////////////////////////////////////////////////
 
 $("h2, .bodytext p").addClass("hidden");
 const animatedElements = $("h2, .bodytext p");
@@ -30,6 +69,6 @@ window.onload = function () {
   checkPosition();
 
   //Sliding the title columns into the window
-  $(".title-col1").addClass("slide-in-left").removeClass("left-skewed");
-  $(".title-col2").addClass("slide-in-right").removeClass("right-skewed");
+  // $(".title-col1").addClass("slide-in-left").removeClass("left-skewed");
+  // $(".title-col2").addClass("slide-in-right").removeClass("right-skewed");
 }
