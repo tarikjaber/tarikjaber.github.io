@@ -7,7 +7,7 @@ document.querySelector(".copyright").innerHTML = "Copyright &copy; Tarik Jaber "
 let titleAnimation = anime({
   targets: 'h1',
   // Properties 
-  translateX: '100%',
+  translateX: ['-100%','0%'],
   // Property Parameters
   duration: 2000,
 });
@@ -15,18 +15,17 @@ let titleAnimation = anime({
 let subtitleAnimation = anime({
   targets: 'h3',
   // Properties 
-  translateX: '100%',
+  translateX: ['-100%', '0%'],
   // Property Parameters
   duration: 2000,
   delay: 100,
 });
 
 let titleImageAnimation = anime({
-  targets: '.title-col2 img',
+  targets: '.title-col2',
   // Properties 
-  translateX: '-100%',
-  scaleX: [
-    {
+  translateX: ['100%', '0%'],
+  scaleX: [{
       value: 0.8,
       delay: 250,
       duration: 375
@@ -86,3 +85,19 @@ document.addEventListener('scroll', function(e) {
 window.onload = function () {
   checkPosition();
 }
+
+/////////////////// SCROLL FUNCTION //////////////////
+$(window).on('scroll', function () {
+  var s = $(window).scrollTop(),
+    d = $(document).height(),
+    c = $(window).height();
+
+  var scrollPercent = (s / (d - c));
+
+  let rotatingTextAnimation = anime({
+    targets: '.rotatingText',
+    rotate: -0.5 * (scrollPercent + 1.2) + "turn",
+    // Property Parameters
+    duration: 4000,
+  });
+})
