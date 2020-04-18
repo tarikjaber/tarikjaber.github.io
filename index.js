@@ -18,7 +18,7 @@ let subtitleAnimation = anime({
   translateX: '100%',
   // Property Parameters
   duration: 2000,
-  delay: 100
+  delay: 100,
 });
 
 let titleImageAnimation = anime({
@@ -40,7 +40,25 @@ let titleImageAnimation = anime({
   duration: 2000,
 });
 
-/////////////////////////////////////////////////////////////
+////////////////////////// SUBTITLE TYPING ANIMATION ///////////////////////////
+
+let i = 0;
+const txt = 'a programmer.'; 
+const typeDelay = 120; 
+const oldTxt = $('h3').text();
+console.log(oldTxt);
+
+function subtitleTyping() {
+  if (i < txt.length) {
+    $('h3').text(document.querySelector('h3').innerHTML.replace(oldTxt.charAt(i), txt.charAt(i)));
+    i++;
+    setTimeout(subtitleTyping, typeDelay);
+  }
+}
+
+setTimeout(subtitleTyping, 2000);
+
+//////////////////////// BODY TEXT FADE IN ////////////////////////////
 
 $("h2, .bodytext p").addClass("hidden");
 const animatedElements = $("h2, .bodytext p");
@@ -67,8 +85,4 @@ document.addEventListener('scroll', function(e) {
 
 window.onload = function () {
   checkPosition();
-
-  //Sliding the title columns into the window
-  // $(".title-col1").addClass("slide-in-left").removeClass("left-skewed");
-  // $(".title-col2").addClass("slide-in-right").removeClass("right-skewed");
 }
