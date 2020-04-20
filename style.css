@@ -274,7 +274,7 @@ a:hover {
 @keyframes fade-in {
     from {
         opacity: 0;
-        transform: translateY(2vh);
+        transform: translateY(3.5vh);
     }
 
     to {
