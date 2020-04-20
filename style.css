@@ -46,12 +46,12 @@ a:hover {
 /******************* TITLE *********************/
 .rotatingText {
     position: fixed;
-    left: -25%;
-    top: 20%;
-    z-index: 2;
-    width: auto;
+    left: -20vw;
+    bottom: -20vw;
+    width: 50%;
     height: auto;
-    transform: rotateZ(-0.6turn);
+    z-index: 2;
+    transform: rotateZ(-0.468turn);
 }
 
 .navbar {
@@ -274,7 +274,7 @@ a:hover {
 @keyframes fade-in {
     from {
         opacity: 0;
-        transform: translateY(5vh);
+        transform: translateY(2vh);
     }
 
     to {

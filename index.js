@@ -87,17 +87,28 @@ window.onload = function () {
 }
 
 /////////////////// SCROLL FUNCTION //////////////////
-$(window).on('scroll', function () {
-  var s = $(window).scrollTop(),
-    d = $(document).height(),
-    c = $(window).height();
 
-  var scrollPercent = (s / (d - c));
+var oldTime = Date.now();
 
-  let rotatingTextAnimation = anime({
-    targets: '.rotatingText',
-    rotate: -0.5 * (scrollPercent + 1.2) + "turn",
-    // Property Parameters
-    duration: 4000,
-  });
+$(window).on('scroll', () => {
+
+  if (Date.now() - oldTime > 100) {
+   var s = $(window).scrollTop(),
+     d = $(document).height(),
+     c = $(window).height();
+
+   var scrollPercent = (s / (d - c));
+
+    var rotatingTextAnimation = anime({
+      targets: '.rotatingText',
+      rotate: -0.600 * (scrollPercent + 0.78) + "turn",
+      // Property Parameters
+
+      duration: 4000,
+    })
+
+   oldTime = Date.now();
+ }
+  //rotatingTextAnimation.pause;
+  
 })
