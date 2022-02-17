@@ -49,7 +49,7 @@ console.log(oldTxt);
 
 function subtitleTyping() {
   if (i < txt.length) {
-    $('h3').text(document.querySelector('h3').innerHTML.replace(oldTxt.charAt(i), txt.charAt(i)));
+    document.querySelector('h3').text(txt.substring(0, i));
     i++;
     setTimeout(subtitleTyping, typeDelay);
   }
