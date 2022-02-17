@@ -1,0 +1,284 @@
+/******************* BODY COLORS *********************/
+:root {
+    --lightLight: #f4f7f7;
+    --darkLight: #5da0a2;
+    --lightDark: #aacfd0;
+    --darkDark: #34495e;
+    --paragraphColor: #eee;
+}
+/******************* BODY TAGS *********************/
+html,
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-color: var(--lightDark);
+    line-height: 1.8;
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+h1 {
+    font-size: 5.625rem;
+    margin: 0 auto;
+    font-family: 'Sacramento', cursive;
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    margin: 15px auto 20px auto;
+}
+
+a {
+    color: var(--darkDark);
+    margin: auto 0;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--darkDark);
+    text-decoration: none;
+}
+
+/******************* CLASS TAGS *********************/
+/******************* TITLE *********************/
+.rotatingText {
+    position: fixed;
+    left: -20vw;
+    bottom: -20vw;
+    width: 50%;
+    height: auto;
+    z-index: 2;
+    transform: rotateZ(-0.468turn);
+}
+
+.navbar {
+    padding: 25px 20%;
+    width: 100%;
+}
+
+.navbar-img {
+    border-radius: 50%;
+    margin-right: 3%;
+}
+
+.row {
+    padding: 5% 20%;
+}
+
+.title-col1,
+.title-col2 {
+    margin: auto;
+    padding: 5% 0;
+}
+
+.title-col1 {
+    text-align: left;
+    height: 40%;
+}
+
+.title-col1 h3 {
+    color: var(--darkLight);
+}
+
+.title-img {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.title-col2 {
+    text-align: right;
+}
+
+/******************* BODY TEXT *********************/
+
+.bodytext {
+    padding: 25px 20%;
+    color: var(--paragraphColor); 
+}
+
+#about h2 {
+    color: var(--lightDark);
+}
+
+#interests h2 {
+    color: var(--darkLight);
+}
+
+#interests p {
+    color: var(--paragraphColor);
+}
+
+/******************* DIVIDERS *********************/
+
+.titleAboutDivider,
+.aboutInterestsDivider,
+.interestsFooterDivider {
+    width: 100%;
+    height: 12vh;
+}
+
+.titleAboutDivider {
+    background: linear-gradient(to top right, var(--darkLight) calc(50% - 1px), var(--lightDark), var(--lightDark) calc(50% + 1px))
+}
+
+.aboutInterestsDivider {
+    background: linear-gradient(to top left, var(--darkDark) calc(50% - 1px), var(--darkLight), var(--darkLight) calc(50% + 1px))
+}
+
+.interestsFooterDivider {
+    background: linear-gradient(to top right, var(--lightLight) calc(50% - 1px), var(--darkDark), var(--darkDark) calc(50% + 1px))
+}
+
+/******************* FOOTER *********************/
+
+.footer {
+    padding: 0 30px 40px;
+    background-color: var(--lightLight);
+    text-align: center;
+    color: var(--darkDark);
+}
+
+.icons {
+    height: 3rem;
+    padding-bottom: 55px;
+}
+
+.icon {
+    padding: 0.75rem .6rem;
+    margin: 0;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    color: var(--darkDark);
+}
+
+.icon:hover {
+    padding: 0 .45rem;
+    color: var(--darkDark);
+    font-size: 1.8rem;
+}
+
+.copyright {
+    margin-bottom: 12px;
+}
+
+/******************* ID TAGS *********************/
+
+#title {
+    color: var(--darkLight);
+    background-color: var(--lightDark);
+}
+
+#about {
+    background-color: var(--darkLight);
+}
+
+#interests {
+    background-color: var(--darkDark);
+}
+
+/******************* MEDIA QUERIES *********************/
+/******************* MOBILE LAYOUT *********************/
+@media (max-width: 767px) {
+
+    .title-col1,
+    .title-col2 {
+        width: 100%;
+    }
+
+    .title-col2 {
+        padding: auto 0;
+        text-align: center;
+    }
+
+    .title-col1 {
+        text-align: center;
+    }
+
+    .title-col1 h3 {
+        margin: 0 0 40px;
+    }
+
+    .navbar {
+        padding: 25px 10% 0;
+    }
+
+    .bodytext {
+        padding: 50px 10%;
+    }
+
+    #title {
+        padding-bottom: 10px;
+    }
+
+    .footer {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .title-img {
+        position: relative;
+    }
+}
+
+/******************* ANIMATIONS *********************/
+
+.left-skewed {
+    transform: translateX(-100%);
+}
+
+.right-skewed {
+    transform: translateX(100%);
+}
+
+.slide-in-left {
+    animation: 1.4s slide-in-left;
+}
+
+.slide-in-right {
+    animation: 1.4s slide-in-right;
+}
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-150%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(150%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fade-in 2.0s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(3.5vh);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
