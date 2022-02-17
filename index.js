@@ -42,7 +42,7 @@ let titleImageAnimation = anime({
 ////////////////////////// SUBTITLE TYPING ANIMATION ///////////////////////////
 
 let i = 0;
-const txt = 'a programmer.'; 
+const txt = 'a big chungus.'; 
 const typeDelay = 120; 
 const oldTxt = $('h3').text();
 console.log(oldTxt);
