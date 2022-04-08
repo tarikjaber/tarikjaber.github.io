@@ -16,18 +16,18 @@ function updateCounts() {
     text = textArea.value
     localStorage.setItem('text', text)
 
-    charCount.innerHTML = `Characters: ${text.length}`
+    charCount.innerHTML = `${text.length}`
 
     let words = text.split('.').join().split('\n').join().split(' ')
     const formattedWords = words.filter((element) => {
         return element !== ''
     })
 
-    wordCount.innerHTML = `Words: ${formattedWords.length}`
+    wordCount.innerHTML = `${formattedWords.length}`
 
     let numSentences = text.split('.').length - 1
 
-    sentenceCount.innerHTML = `Sentences: ${numSentences}`
+    sentenceCount.innerHTML = `${numSentences}`
 }
 
 copyBtn.addEventListener('click', () => {
