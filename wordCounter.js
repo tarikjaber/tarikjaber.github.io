@@ -6,5 +6,11 @@ textArea.addEventListener('input', function (e) {
     let text = e.target.value
 
     charCount.innerHTML = `Characters: ${text.length}`
-    wordCount.innerHTML = `Words: ${text.split(' ').length}`
+
+    let words = text.split(' ');
+    const results = words.filter((element) => {
+        return element !== ''
+    })
+
+    wordCount.innerHTML = `Words: ${results.length}`
 })
