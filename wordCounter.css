@@ -1,13 +1,24 @@
 textarea {
     font-size: 18px;
     margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
 }
 
 #wordCount {
     display: inline;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #charCount {
     display: inline;
     margin-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 30px;
 }
