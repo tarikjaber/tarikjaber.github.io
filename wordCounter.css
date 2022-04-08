@@ -24,12 +24,12 @@ h1 {
     display: inline-flex;
     justify-content: space-between;
     align-items: center; 
-    height: 60px;
     flex-wrap: wrap;
     margin-top: 20px;
     column-gap: 30px;
     row-gap: 15px;
     max-width: 800px;
+    height: 100%;
 }
 
 body {
