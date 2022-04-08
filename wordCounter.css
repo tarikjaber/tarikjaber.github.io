@@ -6,7 +6,7 @@ textarea {
     flex: 100%;
     margin-top: 15px;
     resize: none;
-    padding: 5px 15px;
+    padding: 2px 15px;
     border-radius: 5px;
 }
 
@@ -19,14 +19,17 @@ h1 {
 }
 
 .counterBody {
+    font-family: 'Open Sans', sans-serif;
     padding: 5px 25px 25px 25px;
     display: inline-flex;
+    justify-content: space-between;
     align-items: center; 
     height: 60px;
     flex-wrap: wrap;
     margin-top: 20px;
-    column-gap: 20px;
-    row-gap: 10px;
+    column-gap: 30px;
+    row-gap: 13px;
+    max-width: 800px;
 }
 
 body {
@@ -38,16 +41,16 @@ h2 {
     margin: 0;
 }
 
-.counterBody > h2 {
+.counterBody > *:not(textarea) {
     display: inline;
     font-family: 'Open Sans', sans-serif;
-    flex: 20%;
+    flex: 30%;
     white-space: nowrap;
+    flex-grow: 1;
 }
 
 button {
-    margin-top: 5px;
-    flex-grow: 1;
+    margin: 0;
     display: inline-block;
     cursor: pointer;
     padding: 10px 15px;
@@ -55,7 +58,6 @@ button {
     border-width: 0;
     background-color: dodgerblue;
     color: white;
-    flex: 67%;
     font-size: 17px;
     white-space: nowrap;
 }
