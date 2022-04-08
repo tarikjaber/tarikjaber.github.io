@@ -2,6 +2,8 @@ textarea {
     font-size: 18px;
     margin-top: 20px;
     font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    max-width: 800px;
 }
 
 h1 {
