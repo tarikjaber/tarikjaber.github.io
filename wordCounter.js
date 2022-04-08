@@ -3,7 +3,6 @@ const wordCount = document.getElementById('wordCount')
 const charCount = document.getElementById('charCount')
 
 textArea.addEventListener('input', function (e) {
-    console.log('hello world')
     let text = e.target.value
 
     charCount.innerHTML = `Characters: ${text.length}`
