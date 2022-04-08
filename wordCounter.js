@@ -1,6 +1,8 @@
 const textArea = document.getElementById('text')
 const wordCount = document.getElementById('wordCount')
 const charCount = document.getElementById('charCount')
+const sentenceCount = document.getElementById('sentenceCount')
+const paragraphCount = document.getElementById('paragraphCount')
 const copyBtn = document.getElementById('copy')
 const copiedText = document.getElementById('copied')
 
@@ -17,12 +19,23 @@ function updateCounts() {
 
     charCount.innerHTML = `Characters: ${text.length}`
 
-    let words = text.split(' ')
-    const results = words.filter((element) => {
+    let words = text.split('.').join().split('\n').join().split(' ')
+    const formattedWords = words.filter((element) => {
         return element !== ''
     })
 
-    wordCount.innerHTML = `Words: ${results.length}`
+    wordCount.innerHTML = `Words: ${formattedWords.length}`
+
+    let numSentences = text.split('.').length - 1
+
+    sentenceCount.innerHTML = `Sentences: ${numSentences}`
+
+    let paragraphs = text.split('\n')
+    const formattedParagraphs = paragraphs.filter((element) => {
+        return element !== ''
+    })
+
+    paragraphCount.innerHTML = `Paragraphs: ${formattedParagraphs.length}`
 }
 
 copyBtn.addEventListener('click', () => {

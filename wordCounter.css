@@ -4,9 +4,9 @@ textarea {
     display: block;
     width: 100%;
     flex: 100%;
-    margin-top: 25px;
+    margin-top: 15px;
     resize: none;
-    padding: 10px 15px;
+    padding: 5px 15px;
     border-radius: 5px;
 }
 
@@ -24,8 +24,9 @@ h1 {
     align-items: center; 
     height: 60px;
     flex-wrap: wrap;
-    max-width: 800px;
     margin-top: 20px;
+    column-gap: 20px;
+    row-gap: 10px;
 }
 
 body {
@@ -37,22 +38,15 @@ h2 {
     margin: 0;
 }
 
-#wordCount {
+.counterBody > h2 {
     display: inline;
     font-family: 'Open Sans', sans-serif;
-    display: inline-block;
-    flex: 33%;
-    white-space: nowrap;
-}
-
-#charCount {
-    display: inline;
-    font-family: 'Open Sans', sans-serif;
-    flex: 33%;
+    flex: 20%;
     white-space: nowrap;
 }
 
 button {
+    margin-top: 5px;
     flex-grow: 1;
     display: inline-block;
     cursor: pointer;
@@ -61,7 +55,7 @@ button {
     border-width: 0;
     background-color: dodgerblue;
     color: white;
-    flex: 33%;
+    flex: 67%;
     font-size: 17px;
     white-space: nowrap;
 }
