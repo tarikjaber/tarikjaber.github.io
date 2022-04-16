@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Formatter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+  <link rel="stylesheet" href="codeFormatter.css">
+</head>
+
+<body>
+  <div class="hide-from-print">
+
+    <h1>Code to PDF</h1>
+    <h3 id="document-name">Enter Document Name:</h3>
+    <input id="document-name-input" type="text">
+    <h3>Insert Code:</h3>
+    <textarea name="" id="code-textarea" cols="90" rows="20"></textarea>
+    <br>
+    <button id="print">Print</button>
+
+    <label for="languages">Choose a language:</label>
+    <select name="languages" id="languages">
+      <option value="javascript">Javascript</option>
+      <option value="typescript">Typescript</option>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="php">PHP</option>
+      <option value="python">Python</option>
+      <option value="r">R</option>
+      <option value="c">C</option>
+      <option value="cpp">C++</option>
+      <option value="cs">C#</option>
+      <option value="rust">Rust</option>
+      <option value="go">Go</option>
+      <option value="java">Java</option>
+      <option value="kotlin">Kotlin</option>
+      <option value="swift">Swift</option>
+    </select>
+  </div>
+
+
+  <div id="print-area">
+    <h1 id="document-title">Code</h1>
+    <div id="code-container">
+      <div id="line-nums" class="hljs">
+        <pre>1 </pre>
+      </div>
+      <div id="code-div">
+        <pre><code id="code">console.log("Hello World!");</code></pre>
+      </div>
+    </div>
+  </div>
+  <script src="codeFormatter.js"></script>
+</body>
+
+</html>

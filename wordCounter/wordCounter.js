@@ -6,7 +6,7 @@ const copyBtn = document.getElementById('copy')
 const copiedText = document.getElementById('copied')
 
 let text = localStorage.getItem('text')
-textArea.value = text
+textArea.value = text ?? ''
 
 updateCounts()
 
