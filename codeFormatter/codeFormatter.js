@@ -42,9 +42,9 @@ codeTextArea.addEventListener('input', () => {
         let lines = codeTextArea.value.split('\n');
 
         if (lines[lines.length - 1] === '') {
-            code.style.paddingBottom = "31px"
+            code.style.paddingBottom = "22px"
         } else {
-            code.style.paddingBottom = "14px"
+            code.style.paddingBottom = "10px"
         }
 
         let numLines = lines.length
@@ -52,9 +52,12 @@ codeTextArea.addEventListener('input', () => {
 
         codeLines.innerHTML = ""
 
-        for (let i = 1; i <= numLines; i++) {
+        for (let i = 0; i < numLines; i++) {
 
-            codeLines.innerHTML += `<pre>${i.toString().padStart(numLinesDigits)} </pre>`;
+            codeLines.innerHTML += `<pre>${(i + 1).toString().padStart(numLinesDigits)} </pre>`;
+            if (lines[i].length > 84) {
+                codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
+            }
 
         }
 
