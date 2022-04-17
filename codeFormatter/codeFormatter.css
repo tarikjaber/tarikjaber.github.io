@@ -21,7 +21,12 @@ pre {
 
 #code-container {
   display: flex;
+  margin: 0 -20px;
   font-family: 'Fira Code', monospace;
+}
+
+#document-title {
+  display: none;
 }
 
 #line-nums {
@@ -32,7 +37,6 @@ pre {
   padding-bottom: 4px;
   line-height: 12px;
   display: inline-block;
-  border-radius: 6px 0 0 6px;
 }
 
 #code-div {
@@ -45,12 +49,21 @@ pre {
 
 #code {
   margin-left: 1px;
-  border-radius: 0 6px 6px 0;
 }
 
 @media print {
     body {
-        -webkit-print-color-adjust: exact;
+        
+        color-adjust: exact !important;  
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    #document-title {
+      margin-bottom: 20px
+    }
+
+    #code-container {
+      margin-top: -20px;
     }
 
     .hide-from-print {

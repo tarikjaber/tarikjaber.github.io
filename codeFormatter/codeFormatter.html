@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
+  <link rel="stylesheet" id="theme-style" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
 
@@ -30,11 +30,14 @@
 
     <label for="languages">Choose a language:</label>
     <select name="languages" id="languages">
-      <option value="javascript">Javascript</option>
-      <option value="typescript">Typescript</option>
-      <option value="html">HTML</option>
-      <option value="css">CSS</option>
-      <option value="php">PHP</option>
+      <optgroup label="Web">
+        <option value="javascript">Javascript</option>
+        <option value="typescript">Typescript</option>
+        <option value="json">JSON</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="php">PHP</option>
+      </optgroup>
       <option value="python">Python</option>
       <option value="r">R</option>
       <option value="c">C</option>
@@ -46,6 +49,26 @@
       <option value="kotlin">Kotlin</option>
       <option value="swift">Swift</option>
     </select>
+    <label for="themes">Choose a theme:</label>
+    <select name="themes" id="themes">
+      <optgroup label="Dark">
+        <option value="atom-one-dark">Atom One Dark</option>
+        <option value="vs2015">Visual Studio Code</option>
+        <option value="nord">Nord</option>
+        <option value="monokai">Monokai</option>
+        <option value="github-dark">Github Dark</option>
+        <option value="github-dark-dimmed">Github Dark Dimmed</option>
+      </optgroup>
+      <optgroup label="Light">
+        <option value="atom-one-light">Atom One Light</option>
+        <option value="xcode">Xcode</option>
+        <option value="intellij-light">Intellij Light</option>
+        <option value="github">Github Light</option>
+      </optgroup>
+    </select>
+    <br>
+    <input type="checkbox" id="titleCheckbox" value="Bike">
+    <label for="titleCheckbox"> Display Document Title in PDF</label><br>
   </div>
 
 

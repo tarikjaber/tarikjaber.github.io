@@ -5,8 +5,10 @@ let documentNameInput = document.getElementById('document-name-input');
 let documentTitle = document.getElementById('document-title');
 let languageSelector = document.getElementById('languages')
 let codeLines = document.getElementById('line-nums');
-
+let titleCheckbox = document.getElementById('titleCheckbox');
 let selectedLanguage = 'javascript';
+let themeStylesheet = document.getElementById('theme-style');
+let themeSelector = document.getElementById('themes');
 
 hljs.configure({
     languages: ['java', 'javascript', 'html', 'typescript', 'cpp']
@@ -55,7 +57,7 @@ codeTextArea.addEventListener('input', () => {
         for (let i = 0; i < numLines; i++) {
 
             codeLines.innerHTML += `<pre>${(i + 1).toString().padStart(numLinesDigits)} </pre>`;
-            if (lines[i].length > 84) {
+            if ((lines[i].length > 84 && titleCheckbox.checked) || (lines[i].length > 94 && !titleCheckbox.checked)) {
                 codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
             }
 
@@ -83,3 +85,51 @@ languageSelector.addEventListener('change', () => {
     code.classList.add(`language-${selectedLanguage}`);
     hljs.highlightAll()
 })
+
+themeSelector.addEventListener('change', () => {
+    console.log("hello");
+    themeStylesheet.href = getStylesheet(themeSelector.value);
+    documentTitle.innerHTML = documentNameInput.value;
+})
+
+titleCheckbox.addEventListener('change', () => {
+    let codeContainer = document.getElementById('code-container');
+    let code = document.getElementById('code');
+    let lineNums = document.getElementById('line-nums');
+
+    if (titleCheckbox.checked) {
+        documentTitle.style.display = "block";
+        codeContainer.style.marginLeft = "0px";
+        codeContainer.style.marginRight = "0px";
+
+        lineNums.style.borderRadius = "6px 0 0 6px";
+        code.style.borderRadius = "0 6px 6px 0";
+    } else {
+        documentTitle.style.display = "none";
+
+        codeContainer.style.marginLeft = "-20px";
+        codeContainer.style.marginRight = "-20px";
+
+        lineNums.style.borderRadius = "0"
+        code.style.borderRadius = "0"
+    }
+    console.log(titleCheckbox.checked);
+})
+
+function getStylesheet(style) {
+    return `//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/${style}.min.css`
+}
+
+window.addEventListener('beforeprint', event => { 
+    console.log("before print");
+    if (!titleCheckbox.checked) {
+        document.body.classList.add('hljs')
+    }
+});
+
+window.addEventListener('afterprint', event => {
+    console.log("after print");
+    if (!titleCheckbox.checked) {
+        document.body.classList.remove('hljs')
+    }
+});
