@@ -88,12 +88,12 @@ function updateLineNumbers() {
         if (lines[i].length > 93 && titleCheckbox.checked) {
             console.log("Hello");
            
-            for (let j = 0; j < (lines[i].length - 1) / 93 - 1; j++) {
+            for (let j = 0; j < (lines[i].length) / 93 - 1; j++) {
                 console.log((lines[i].length - 1) / 93 - 1);
                 codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
             }
         } else if (lines[i].length > 98 && !titleCheckbox.checked) {
-            for (let j = 0; j < (lines[i].length - 1) / 98 - 1; j++) {
+            for (let j = 0; j < (lines[i].length) / 98 - 1; j++) {
                 codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
             }
         }
