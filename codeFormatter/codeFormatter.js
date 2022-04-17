@@ -72,9 +72,9 @@ function updateLineNumbers() {
 
 
     if (lines[lines.length - 1] === '') {
-        code.style.paddingBottom = "22px"
+        code.style.paddingBottom = "31px"
     } else {
-        code.style.paddingBottom = "10px"
+        code.style.paddingBottom = "14px"
     }
 
     let numLines = lines.length
@@ -85,17 +85,15 @@ function updateLineNumbers() {
     for (let i = 0; i < numLines; i++) {
 
         codeLines.innerHTML += `<pre>${(i + 1).toString().padStart(numLinesDigits)} </pre>`;
-        if (lines[i].length > 84 && titleCheckbox.checked) {
+        if (lines[i].length > 93 && titleCheckbox.checked) {
             console.log("Hello");
-            for (let j = 0; j < (lines[i].length - 1) / 84 - 1; j++) {
-                console.log("In here");
-                console.log(lines[i].length);
-                console.log(lines[i]);
-                console.log((lines[i].length - 1) / 84);
+           
+            for (let j = 0; j < (lines[i].length - 1) / 93 - 1; j++) {
+                console.log((lines[i].length - 1) / 93 - 1);
                 codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
             }
-        } else if (lines[i].length > 94 && !titleCheckbox.checked) {
-            for (let j = 0; j < (lines[i].length - 1) / 94 - 1; j++) {
+        } else if (lines[i].length > 98 && !titleCheckbox.checked) {
+            for (let j = 0; j < (lines[i].length - 1) / 98 - 1; j++) {
                 codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
             }
         }

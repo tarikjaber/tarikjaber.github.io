@@ -10,10 +10,7 @@ h1 {
 
 }
 
-code {
-    font-size: 10px;
-    white-space: pre-wrap;
-}
+
 
 pre {
   margin: 0;
@@ -29,13 +26,18 @@ pre {
   display: none;
 }
 
+code {
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
 #line-nums {
   width: auto;
-  font-size: 10px;
+  font-size: 14px;
   padding-left: 11px;
-  padding-top: 10px;
+  padding-top: 13px;
   padding-bottom: 4px;
-  line-height: 12px;
+  line-height: 17px;
   display: inline-block;
 }
 
@@ -48,7 +50,8 @@ pre {
 }
 
 #code {
-  margin-left: 1px;
+  
+  margin-left: 2px;
 }
 
 @media print {
