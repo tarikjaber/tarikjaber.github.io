@@ -98,6 +98,7 @@ titleCheckbox.addEventListener('change', () => {
     let lineNums = document.getElementById('line-nums');
 
     if (titleCheckbox.checked) {
+        documentTitle.value = documentNameInput.value ?? "Code"; 
         documentTitle.style.display = "block";
         codeContainer.style.marginLeft = "0px";
         codeContainer.style.marginRight = "0px";
