@@ -109,7 +109,7 @@ code {
 
 #print-area {
     padding: 20px;
-    display: block;
+    display: none;
 }
 
 @media print {
