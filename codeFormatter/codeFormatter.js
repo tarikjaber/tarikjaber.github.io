@@ -5,10 +5,8 @@ let documentNameInput = document.getElementById('document-name-input');
 let documentTitle = document.getElementById('document-title');
 let languageSelector = document.getElementById('languages')
 let codeLines = document.getElementById('line-nums');
-let titleCheckbox = document.getElementById('titleCheckbox');
 let themeStylesheet = document.getElementById('theme-style');
 let themeSelector = document.getElementById('themes');
-let clearBtn = document.getElementById('clear');
 
 let selectedLanguage = 'javascript';
 let selectedTheme = 'default';
@@ -29,6 +27,8 @@ codeTextArea.value = codeText;
 code.innerHTML = escape(codeText)
 updateLineNumbers();
 
+console.log("javascript run");
+
 hljs.configure({
     languages: ['java', 'javascript', 'html', 'typescript', 'cpp']
 })
@@ -36,6 +36,7 @@ hljs.configure({
 hljs.highlightAll();
 
 printBtn.addEventListener('click', () => {
+    console.log("Print button clicked.");
     document.title = documentTitle.textContent ?? "code.pdf";
 
     window.print();
@@ -50,7 +51,7 @@ function escape(s) {
     );
 }
 
-codeTextArea.addEventListener('input', () => {
+codeTextArea.addEventListener('onChange', () => {
 
     if (codeTextArea.value !== '') {
         localStorage.setItem('code', codeTextArea.value);
@@ -85,27 +86,13 @@ function updateLineNumbers() {
     for (let i = 0; i < numLines; i++) {
 
         codeLines.innerHTML += `<pre>${(i + 1).toString().padStart(numLinesDigits)} </pre>`;
-        if (lines[i].length > 93 && titleCheckbox.checked) {
-            console.log("Hello");
-           
-            for (let j = 0; j < (lines[i].length) / 93 - 1; j++) {
-                console.log((lines[i].length - 1) / 93 - 1);
-                codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
-            }
-        } else if (lines[i].length > 98 && !titleCheckbox.checked) {
-            for (let j = 0; j < (lines[i].length) / 98 - 1; j++) {
-                codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
-            }
+        for (let j = 0; j < (lines[i].length) / 98 - 1; j++) {
+            codeLines.innerHTML += `<pre>${"".padStart(numLinesDigits)} </pre>`;
         }
     }
 
     codeLines.classList.add("hljs")
 }
-
-documentNameInput.addEventListener('input', () => {
-
-    documentTitle.innerHTML = documentNameInput.value;
-})
 
 languageSelector.addEventListener('change', () => {
     code.classList.remove(`language-${selectedLanguage}`);
@@ -123,30 +110,6 @@ themeSelector.addEventListener('change', () => {
     localStorage.setItem('theme', themeSelector.value);
 })
 
-titleCheckbox.addEventListener('change', () => {
-    let codeContainer = document.getElementById('code-container');
-    let code = document.getElementById('code');
-    let lineNums = document.getElementById('line-nums');
-
-    if (titleCheckbox.checked) {
-        documentTitle.value = documentNameInput.value ?? "Code"; 
-        documentTitle.style.display = "block";
-        codeContainer.style.marginLeft = "0px";
-        codeContainer.style.marginRight = "0px";
-
-        lineNums.style.borderRadius = "6px 0 0 6px";
-        code.style.borderRadius = "0 6px 6px 0";
-    } else {
-        documentTitle.style.display = "none";
-
-        codeContainer.style.marginLeft = "-20px";
-        codeContainer.style.marginRight = "-20px";
-
-        lineNums.style.borderRadius = "0"
-        code.style.borderRadius = "0"
-    }
-})
-
 function getStylesheet(style) {
     return `//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/${style}.min.css`
 }
@@ -162,10 +125,3 @@ window.addEventListener('afterprint', event => {
         document.body.classList.remove('hljs')
     }
 });
-
-clearBtn.addEventListener('click', () => {
-    codeTextArea.value = "";
-    code.innerHTML = " ";
-    localStorage.setItem('code', "");
-    updateLineNumbers();
-})

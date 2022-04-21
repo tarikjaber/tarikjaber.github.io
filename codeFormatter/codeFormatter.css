@@ -1,29 +1,84 @@
 body {
     font-family: 'Roboto', sans-serif;
-    padding: 20px;
     margin: 0px;
+}
+
+select {
+  padding: 6px;
+  border-radius: 5px;
 }
 
 h1 {
     margin: 0;
     padding-bottom: 20px;
-
+    color: white;
+    background-color: #222831;
+    padding: 20px;
+    margin: -20px -20px 20px -20px;
 }
 
+.options {
+  display: flex;
+  column-gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
 
+input {
+  padding: 6.5px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.options > *:not(button) {
+  flex-grow: 2;
+}
+
+button {
+  border-width: 0;
+  background-color: dodgerblue;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  flex-grow:1;
+  width: 120px;
+}
+
+button:active {
+  background-color: #5584AC;
+}
+
+textarea {
+    padding: 10px;
+    margin-top: 20px;
+    resize:none;
+    flex-grow: 1;
+}
+
+html, body {
+  height: 100%;
+}
+
+.hide-from-print {
+  height: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
 
 pre {
-  margin: 0;
+    margin: 0;
 }
 
 #code-container {
-  display: flex;
-  margin: 0 -20px;
-  font-family: 'Fira Code', monospace;
+    display: flex;
+    margin: 0 -20px;
+    font-family: 'Fira Code', monospace;
 }
 
 #document-title {
-  display: none;
+    display: none;
 }
 
 code {
@@ -32,41 +87,47 @@ code {
 }
 
 #line-nums {
-  width: auto;
-  font-size: 14px;
-  padding-left: 11px;
-  padding-top: 13px;
-  padding-bottom: 4px;
-  line-height: 17px;
-  display: inline-block;
+    width: auto;
+    font-size: 14px;
+    padding-left: 11px;
+    padding-top: 13px;
+    padding-bottom: 4px;
+    display: inline-block;
 }
 
 #code-div {
-  background-color: #c9d1d9;
-  border-radius: 5px;
-  width: auto;
-  flex: 1;
-  display: inline-block;
+    background-color: #c9d1d9;
+    border-radius: 5px;
+    width: auto;
+    flex: 1;
+    display: inline-block;
 }
 
 #code {
-  
-  margin-left: 2px;
+    margin-left: 2px;
+}
+
+#print-area {
+    padding: 20px;
+    display: none;
 }
 
 @media print {
     body {
-        
-        color-adjust: exact !important;  
+        color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
     }
 
     #document-title {
-      margin-bottom: 20px
+        margin-bottom: 20px;
+    }
+
+    #print-area {
+        display: block;
     }
 
     #code-container {
-      margin-top: -20px;
+        margin-top: -20px;
     }
 
     .hide-from-print {
@@ -75,6 +136,6 @@ code {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }

@@ -10,9 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" id="theme-style" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
-
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script> -->
+  <link rel="stylesheet" id="theme-style"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
   <script src="./highlight.min.js"></script>
 
   <link rel="stylesheet" href="codeFormatter.css">
@@ -20,64 +19,50 @@
 
 <body>
   <div class="hide-from-print">
-
     <h1>Code to PDF</h1>
-    <h3 id="document-name">Enter Document Name:</h3>
-    <input id="document-name-input" type="text">
-    <h3>Insert Code:</h3>
-    <button id="clear">Clear</button>
-    <br>
-    <textarea name="" id="code-textarea" cols="90" rows="20"></textarea>
-    <br>
-    <button id="print">Print</button>
-
-    <label for="languages">Choose a language:</label>
-    <select name="languages" id="languages">
-      <optgroup label="Web">
+    <div class="options">
+      <input id="document-name-input" type="text" placeholder="Input name">
+      <select name="languages" id="languages">
         <option value="javascript">Javascript</option>
         <option value="typescript">Typescript</option>
         <option value="json">JSON</option>
         <option value="html">HTML</option>
         <option value="css">CSS</option>
         <option value="php">PHP</option>
-      </optgroup>
-      <option value="python">Python</option>
-      <option value="r">R</option>
-      <option value="c">C</option>
-      <option value="cpp">C++</option>
-      <option value="cs">C#</option>
-      <option value="rust">Rust</option>
-      <option value="go">Go</option>
-      <option value="java">Java</option>
-      <option value="kotlin">Kotlin</option>
-      <option value="swift">Swift</option>
-      <option value="armasm">ARM Assembly</option>
-      <option value="x86asm">x86 Assembly</option>
-    </select>
-    <label for="themes">Choose a theme:</label>
-    <select name="themes" id="themes">
-      <optgroup label="Dark">
-        <option value="atom-one-dark">Atom One Dark</option>
-        <option value="vs2015">Visual Studio Code</option>
-        <option value="nord">Nord</option>
-        <option value="monokai">Monokai</option>
-        <option value="github-dark">Github Dark</option>
-        <option value="github-dark-dimmed">Github Dark Dimmed</option>
-      </optgroup>
-      <optgroup label="Light">
-        <option value="atom-one-light">Atom One Light</option>
-        <option value="default">Default</option>
-        <option value="xcode">Xcode</option>
-        <option value="intellij-light">Intellij Light</option>
-        <option value="github">Github Light</option>
-      </optgroup>
-    </select>
-    <br>
-    <input type="checkbox" id="titleCheckbox" value="Bike">
-    <label for="titleCheckbox"> Display Document Title in PDF</label><br>
+        <option value="python">Python</option>
+        <option value="r">R</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="cs">C#</option>
+        <option value="rust">Rust</option>
+        <option value="go">Go</option>
+        <option value="java">Java</option>
+        <option value="kotlin">Kotlin</option>
+        <option value="swift">Swift</option>
+        <option value="armasm">ARM Assembly</option>
+        <option value="x86asm">x86 Assembly</option>
+      </select>
+      <select name="themes" id="themes">
+        <optgroup label="Dark">
+          <option value="atom-one-dark">Atom One Dark</option>
+          <option value="vs2015">Visual Studio Code</option>
+          <option value="nord">Nord</option>
+          <option value="monokai">Monokai</option>
+          <option value="github-dark">Github Dark</option>
+          <option value="github-dark-dimmed">Github Dark Dimmed</option>
+        </optgroup>
+        <optgroup label="Light">
+          <option value="atom-one-light">Atom One Light</option>
+          <option value="default">Default</option>
+          <option value="xcode">Xcode</option>
+          <option value="intellij-light">Intellij Light</option>
+          <option value="github">Github Light</option>
+        </optgroup>
+      </select>
+      <button id="print">Print</button>
+    </div>
+    <textarea placeholder="Enter code...">
   </div>
-
-
   <div id="print-area">
     <h1 id="document-title">Code</h1>
     <div id="code-container">
@@ -91,5 +76,4 @@
   </div>
   <script src="codeFormatter.js"></script>
 </body>
-
 </html>
