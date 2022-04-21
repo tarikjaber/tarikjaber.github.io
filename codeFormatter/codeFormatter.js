@@ -23,19 +23,20 @@ languageSelector.value = selectedLanguage;
 themeStylesheet.href = getStylesheet(selectedTheme);
 
 codeText = localStorage.getItem('code') ?? 'console.log("Hello World")';
-console.log(codeText);
 localStorage.setItem('code', codeText);
 codeTextArea.value = codeText;
 code.innerHTML = escape(codeText)
 updateLineNumbers();
-
-console.log("javascript run");
 
 hljs.configure({
     languages: ['java', 'javascript', 'html', 'typescript', 'cpp']
 })
 
 hljs.highlightAll();
+
+documentNameInput.addEventListener('input', () => {
+    documentTitle.innerHTML = documentNameInput.value;
+})
 
 printBtn.addEventListener('click', () => {
     console.log("Print button clicked.");
