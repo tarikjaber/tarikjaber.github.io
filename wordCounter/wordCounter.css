@@ -2,12 +2,12 @@ textarea {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     display: block;
-    width: 100%;
     flex: 100%;
     margin-top: 6px;
     resize: none;
     padding: 2px 15px;
     border-radius: 5px;
+    align-self: stretch;
 }
 
 h1 {
@@ -19,22 +19,25 @@ h1 {
 }
 
 .counterBody {
+    align-content: flex-start;
     font-family: 'Open Sans', sans-serif;
-    padding: 5px 25px 25px 25px;
-    display: inline-flex;
+    
+    display: flex;
     justify-content: space-between;
-    align-items: center; 
+    padding: 5px 25px 25px 25px;
     flex-wrap: wrap;
+    row-gap: 20px;
     margin-top: 20px;
     column-gap: 30px;
-    row-gap: 15px;
+
     max-width: 800px;
-    height: 100%;
+    
 }
 
 body {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 h2 {
@@ -64,6 +67,7 @@ button {
     background-color: dodgerblue;
     color: white;
     font-size: 17px;
+    margin: 6px 0px;
     white-space: nowrap;
 }
 
