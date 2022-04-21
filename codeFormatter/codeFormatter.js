@@ -1,5 +1,5 @@
 let printBtn = document.getElementById('print');
-let codeTextArea = document.getElementById('code-textarea');
+let codeTextArea = document.getElementsByTagName('textarea')[0];
 let code = document.getElementById('code');
 let documentNameInput = document.getElementById('document-name-input');
 let documentTitle = document.getElementById('document-title');
@@ -23,6 +23,8 @@ languageSelector.value = selectedLanguage;
 themeStylesheet.href = getStylesheet(selectedTheme);
 
 codeText = localStorage.getItem('code') ?? 'console.log("Hello World")';
+console.log(codeText);
+localStorage.setItem('code', codeText);
 codeTextArea.value = codeText;
 code.innerHTML = escape(codeText)
 updateLineNumbers();
@@ -114,7 +116,7 @@ function getStylesheet(style) {
     return `//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/${style}.min.css`
 }
 
-window.addEventListener('beforeprint', event => { 
+window.addEventListener('beforeprint', event => {
     if (!titleCheckbox.checked) {
         document.body.classList.add('hljs')
     }
