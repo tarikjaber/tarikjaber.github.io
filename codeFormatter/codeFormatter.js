@@ -54,7 +54,7 @@ function escape(s) {
     );
 }
 
-codeTextArea.addEventListener('onChange', () => {
+codeTextArea.addEventListener('input', () => {
 
     if (codeTextArea.value !== '') {
         localStorage.setItem('code', codeTextArea.value);
@@ -73,7 +73,6 @@ codeTextArea.addEventListener('onChange', () => {
 
 function updateLineNumbers() {
     let lines = codeTextArea.value.split('\n');
-
 
     if (lines[lines.length - 1] === '') {
         code.style.paddingBottom = "31px"
@@ -118,13 +117,9 @@ function getStylesheet(style) {
 }
 
 window.addEventListener('beforeprint', event => {
-    if (!titleCheckbox.checked) {
-        document.body.classList.add('hljs')
-    }
+    document.body.classList.add('hljs')
 });
 
 window.addEventListener('afterprint', event => {
-    if (!titleCheckbox.checked) {
-        document.body.classList.remove('hljs')
-    }
+    document.body.classList.remove('hljs')
 });

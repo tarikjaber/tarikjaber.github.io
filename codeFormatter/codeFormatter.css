@@ -52,7 +52,7 @@ button:active {
 textarea {
     padding: 10px;
     margin-top: 20px;
-    resize:none;
+    resize: none;
     flex-grow: 1;
 }
 
@@ -109,13 +109,13 @@ code {
 
 #print-area {
     padding: 20px;
-    display: none;
+    display: block;
 }
 
 @media print {
     body {
-        color-adjust: exact !important;
-        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact;
+        -webkit-print-color-adjust: exact;
     }
 
     #document-title {
@@ -131,7 +131,7 @@ code {
     }
 
     .hide-from-print {
-        display: none !important;
+        display: none;
     }
 }
 
