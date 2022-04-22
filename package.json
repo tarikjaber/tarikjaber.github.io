@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "@types/animejs": "^3.1.4"
-  }
+  },
+  "name": "personal-website",
+  "description": "Basic personal website.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarikjaber/tarikjaber.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarikjaber/tarikjaber.github.io/issues"
+  },
+  "homepage": "https://github.com/tarikjaber/tarikjaber.github.io#readme",
+  "keywords": []
 }

@@ -1,9 +1,10 @@
 //////////////////////// DATE FOR FOOTER ////////////////////////////
-var date = new Date();
-var year = date.getFullYear();
+let date = new Date();
+let year = date.getFullYear();
 document.querySelector(".copyright").innerHTML = "Copyright &copy; Tarik Jaber " + String(year);
 
 //////////////////////// ANIME JS ////////////////////////////
+
 let titleAnimation = anime({
   targets: 'h1',
   // Properties 
@@ -44,7 +45,7 @@ let titleImageAnimation = anime({
 let i = 0;
 const txt = 'a big chungus.'; 
 const typeDelay = 120; 
-const oldTxt = $('h3').text();
+const oldTxt = document.getElementsByTagName('h3')[0].innerText;
 console.log(oldTxt);
 
 function subtitleTyping() {
