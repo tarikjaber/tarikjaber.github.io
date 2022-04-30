@@ -105,6 +105,7 @@ languageSelector.addEventListener('change', () => {
     code.classList.add(`language-${selectedLanguage}`);
 
     localStorage.setItem('language', selectedLanguage);
+    hljs.highlightBlock(code)
 })
 
 themeSelector.addEventListener('change', () => {
@@ -113,6 +114,7 @@ themeSelector.addEventListener('change', () => {
     documentTitle.innerHTML = documentNameInput.value;
 
     localStorage.setItem('theme', themeSelector.value);
+    hljs.highlightBlock(code)
 })
 
 function getStylesheet(style) {
