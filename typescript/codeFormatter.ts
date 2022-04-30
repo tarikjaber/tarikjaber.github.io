@@ -72,7 +72,6 @@ codeTextArea.addEventListener('input', () => {
     }
    
     hljs.highlightBlock(code)
-
 })
 
 function updateLineNumbers() {
