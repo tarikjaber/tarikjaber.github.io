@@ -17,20 +17,22 @@
 <body>
   <h1><a href="index.html">Word Counter</a></h1>
   <div class="counterBody">
-    <div class="info-display">
-      <p>Words</p>
-      <h2 id="wordCount">0</h2>
+    <div class="options">
+      <div class="info-display">
+        <p>Words</p>
+        <h2 id="wordCount">0</h2>
+      </div>
+      <div class="info-display">
+        <p>Characters</p>
+        <h2 id="charCount">0</h2>
+      </div>
+      <div class="info-display">
+        <p>Sentences</p>
+        <h2 id="sentenceCount">0</h2>
+      </div>
+      <button id="copy">Copy Text</button>
     </div>
-    <div class="info-display">
-      <p>Characters</p>
-      <h2 id="charCount">0</h2>
-    </div>
-    <div class="info-display">
-      <p>Sentences</p>
-      <h2 id="sentenceCount">0</h2>
-    </div>
-    <button id="copy">Copy Text</button>
-    <textarea id="text" cols="80" rows="22" wrap="hard"></textarea>
+    <textarea id="text" wrap="hard"></textarea>
   </div>
 </body>
 <script src="wordCounter.js"></script>

@@ -1,4 +1,4 @@
-const textArea = document.getElementById('text')
+const textArea = document.getElementById('text') as HTMLTextAreaElement
 const wordCount = document.getElementById('wordCount')
 const charCount = document.getElementById('charCount')
 const sentenceCount = document.getElementById('sentenceCount')
@@ -33,7 +33,11 @@ function updateCounts() {
 copyBtn.addEventListener('click', () => {
     copyBtn.style.backgroundColor = 'mediumseagreen'
     copyBtn.innerHTML = 'Copied!'
-    navigator.clipboard.writeText(textArea.value)
+    try {
+        navigator.clipboard.writeText(textArea.value)
+    } catch (error) {
+        console.log("Issue copying to clipboard.");
+    }
     setTimeout(() => {
         copyBtn.innerHTML = 'Copy Text'
         copyBtn.style.color = 'white'
