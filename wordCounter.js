@@ -2,6 +2,7 @@ const textArea = document.getElementById('text');
 const wordCount = document.getElementById('wordCount');
 const charCount = document.getElementById('charCount');
 const sentenceCount = document.getElementById('sentenceCount');
+const linesCount = document.getElementById('linesCount');
 const copyBtn = document.getElementById('copy');
 const copiedText = document.getElementById('copied');
 let text = localStorage.getItem('text');
@@ -19,6 +20,8 @@ function updateCounts() {
     wordCount.innerHTML = `${formattedWords.length}`;
     let numSentences = text.split('.').length - 1;
     sentenceCount.innerHTML = `${numSentences}`;
+    let numLines = text.split('\n').length;
+    linesCount.innerHTML = `${numLines}`
 }
 copyBtn.addEventListener('click', () => {
     copyBtn.style.backgroundColor = 'mediumseagreen';

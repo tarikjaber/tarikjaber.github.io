@@ -20,8 +20,8 @@ html, body {
 .counterBody {
   display: flex;
   flex-direction: column;
-  
-  
+
+
   height: calc(100vh - 25px);
 }
 
@@ -62,12 +62,10 @@ h2 {
     margin: 0;
 }
 
-
-
 .options > *:not(textarea) {
     display: inline-block;
     font-family: 'Open Sans', sans-serif;
-    flex: 20%;
+    flex: 15%;
     white-space: nowrap;
     flex-grow: 1;
 }
